@@ -4,7 +4,7 @@ spring:
   datasource:
     # jdbc:mysql://${MYSQL_HOST:mysql-standalone}:3306/db_order
     url: jdbc:mysql://localhost:3306/db_order?createDatabaseIfNotExits=true&useUnicode=yes&characterEncoding=utf8
-    username: hoangtd5
+    username: hoangtd6
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     # Keep the connection alive if idle for a long time (needed in production)
