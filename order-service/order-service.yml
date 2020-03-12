@@ -53,7 +53,7 @@ management:
       exposure:
         include: *
     health:
-      show-details=always:
+      show-details: always
 
 #eureka:
 #  client:

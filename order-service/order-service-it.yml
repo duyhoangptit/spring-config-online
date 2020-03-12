@@ -35,5 +35,15 @@ spring
           user
             name ${spring.security.user.name}
             password ${spring.security.user.password}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+    health:
+      show-details: always
+
+
 server
   port 8091
