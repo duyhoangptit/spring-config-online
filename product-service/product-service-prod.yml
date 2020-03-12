@@ -3,7 +3,7 @@ spring:
     name: product-service
   datasource:
     # jdbc:mysql://${MYSQL_HOST:mysql-standalone}:3306/db_product
-    url: jdbc:mysql://localhost:3306/db_product?createDatabaseIfNotExits=true&useUnicode=yes&characterEncoding=utf8
+    url: jdbc:mysql://mysql-standalone:3306/db_product?createDatabaseIfNotExits=true&useUnicode=yes&characterEncoding=utf8
     username: hoangtd5
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -19,23 +19,6 @@ spring:
       use-new-id-generator-mappings: false
     # Show or not log for each sql query
     show-sql: true
-  security:
-    user:
-      name: admin
-      password: admin
-      roles: ADMIN
-  boot:
-    admin:
-      # setting client & register security to admin
-      client:
-        username: ${spring.security.user.name}
-        password: ${spring.security.user.password}
-        url: http://localhost:8094
-        instance:
-          metadata:
-            user:
-              name: ${spring.security.user.name}
-              password: ${spring.security.user.password}
 
 # setting minio store file
 storage:

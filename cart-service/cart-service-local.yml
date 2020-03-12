@@ -1,9 +1,9 @@
 spring:
   application:
-    name: order-service
+    name: product-service
   datasource:
-    # jdbc:mysql://${MYSQL_HOST:mysql-standalone}:3306/db_order
-    url: jdbc:mysql://localhost:3306/db_order?createDatabaseIfNotExits=true&useUnicode=yes&characterEncoding=utf8
+    # jdbc:mysql://${MYSQL_HOST:mysql-standalone}:3306/db_product
+    url: jdbc:mysql://mysql-standalone:3306/db_product?createDatabaseIfNotExits=true&useUnicode=yes&characterEncoding=utf8
     username: hoangtd5
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -11,56 +11,22 @@ spring:
     dbcp2:
       test-while-idle: true
       validation-query: SELECT 1
-    jpa:
-      # Show or not log for each sql query
-      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-      show-sql: true
-      generate-ddl: true
-      hibernate:
-        # drop n create table, good for testing, comment this in production
-        # validate: validate the schema, makes no changes to the database.
-        # update: update the schema.
-        # create: creates the schema, destroying previous data.
-        # create-drop: drop the schema at the end of the session.
-        ddl-auto: update
-        #`hibernate_sequence' doesn't exist
-        use-new-id-generator-mappings: false
+  jpa:
+    hibernate:
+      # drop n create table, good for testing, comment this in production
+      ddl-auto: update
+      #`hibernate_sequence' doesn't exist
+      use-new-id-generator-mappings: false
+    # Show or not log for each sql query
+    show-sql: true
 
-  security:
-    user:
-      name: admin
-      password: admin
-      roles: ADMIN
-  boot:
-    admin:
-      # setting client & register security to admin
-      client:
-        username: ${spring.security.user.name}
-        password: ${spring.security.user.password}
-        url: http://localhost:8094
-        instance:
-          metadata:
-            user:
-              name: ${spring.security.user.name}
-              password: ${spring.security.user.password}
+# setting minio store file
+storage:
+  access-key: minio
+  secret-key: minio123
+  entpoint: http://172.20.0.3:9000/
+  expire: 600
+  bucketNamePrefix: tiger-
 
 server:
-  port: 8093
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include=*:
-    health:
-      show-details=always:
-
-#eureka:
-#  client:
-#    registryFetchIntervalSeconds: 5
-#    registerWithEureka: true
-#    fetchRegistry: true
-#    serviceUrl:
-#      defaultZone: http://localhost:8070/eureka
-#  instance:
-#    hostname: localhost
+  port: 8092
