@@ -51,9 +51,10 @@ management:
   endpoints:
     web:
       exposure:
-        include=*:
+        include:*
     health:
       show-details=always:
+
 
 #eureka:
 #  client:
