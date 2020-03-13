@@ -44,10 +44,9 @@ spring:
               name: ${spring.security.user.name}
               password: ${spring.security.user.password}
 
-server:
-  port: 8093
-
 management:
+  security:
+    enabled: false
   endpoints:
     web:
       exposure:
