@@ -25,12 +25,6 @@ spring:
         ddl-auto: update
         #`hibernate_sequence' doesn't exist
         use-new-id-generator-mappings: false
-
-  security:
-    user:
-      name: admin
-      password: admin
-      roles: ADMIN
   boot:
     admin:
       # setting client & register security to admin
@@ -43,6 +37,41 @@ spring:
             user:
               name: ${spring.security.user.name}
               password: ${spring.security.user.password}
+   # rabbitmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cache:
+    type: redis
+    redis:
+      cache-null-values: false
+      time-to-live: 600000
+      use-key-prefix: false
+  # redis config
+  redis:
+    host: localhost
+    port: 6379
+    ssl: false
+    timeout: 12m
+    jedis:
+      pool:
+        max-active: 1
+        max-idle: 25
+        max-wait: 30000ms
+        min-idle: 5 
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
+
 security:
   oauth2:
     resource:
@@ -51,18 +80,6 @@ security:
       client-id: mobile
       client-secret: pin
 
-
-server:
-  port: 8093
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-    health:
-      show-details: always
-#
 #eureka:
 #  client:
 #    registryFetchIntervalSeconds: 5
