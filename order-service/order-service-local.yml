@@ -76,12 +76,14 @@ security:
   oauth2:
     resource:
       jwt:
-        key-value: AAAAB3NzaC1yc2EAAAADAQABAAABAQChB90AepmJva8ACiEDEtqxC5omPrNM2/h2
+        key-value: -----BEGIN PUBLIC KEY-----
+          AAAAB3NzaC1yc2EAAAADAQABAAABAQChB90AepmJva8ACiEDEtqxC5omPrNM2/h2
           21s96DoYEvVAHXk/jcI1yGD3394mBMB4HdaAl14pM+VOhyyOy09/CGW41Ud10RZW
           yY2TRxpAevFK3Cyf93V5H2/kE1pktrUvlQFOXq/pH6mxbHXr6w4jNYrcWJGzZDD7
           HvOLtnVkKNCVmz17EjT9SM0GbWtrUoPT519O9S6b0YEykA58EHKtbKwjrD5TvBKW
           1gx6yrZMlWJKOfuDwW6nUnOniKel/4O2W8tAt0Lwk8HGY1Zkbjgs5CMN4OUtNYHX
           dJuvyzHifuH7krh6fAJ5kDG0fqs6WRaMd+VVYDRqH8Q9hwN9jbk5
+          -----END PUBLIC KEY-----
 
 #eureka:
 #  client:
