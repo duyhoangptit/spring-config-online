@@ -76,12 +76,12 @@ security:
   oauth2:
     resource:
       jwt:
-        key-value: AAAAB3NzaC1yc2EAAAADAQABAAABAQChB90AepmJva8ACiEDEtqxC5omPrNM2/h2
-          21s96DoYEvVAHXk/jcI1yGD3394mBMB4HdaAl14pM+VOhyyOy09/CGW41Ud10RZW
-          yY2TRxpAevFK3Cyf93V5H2/kE1pktrUvlQFOXq/pH6mxbHXr6w4jNYrcWJGzZDD7
-          HvOLtnVkKNCVmz17EjT9SM0GbWtrUoPT519O9S6b0YEykA58EHKtbKwjrD5TvBKW
-          1gx6yrZMlWJKOfuDwW6nUnOniKel/4O2W8tAt0Lwk8HGY1Zkbjgs5CMN4OUtNYHX
-          dJuvyzHifuH7krh6fAJ5kDG0fqs6WRaMd+VVYDRqH8Q9hwN9jbk5
+        key-value: AAAAB3NzaC1yc2EAAAADAQABAAABAQDh03CD9mcLC2EoNlYvxFXFPa9MLkLrv858
+    jZrH4+O1i9NOJV1mH27m8usOCCDq4miWG1G3/3oCJJok7qFMhzZi03atEcDnGCBO
+    cY0aEdCSZd3H17mNspMg8stMuDwU/coD2b7QYrlECKMl53mq+OlbRFJnJ1sLBvCf
+    6CqWkL9rp9utRnP9rk9jnoTTJ3+QHpROdj3YZ79IR/NA+tlz7tHiQjs3y94UwYO6
+    5ORp90xNQzIYnqhQmMtrusTuE6tHW9x9ieN8t+Eg0da+Gv/kh1D6owKzHcDJ0kSs
+    m7N5xAN9Sw0oeeVSvSErguLGXS+K2x91mym1jFCPxaUfZjmyMURr
 
 #eureka:
 #  client:
