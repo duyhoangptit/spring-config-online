@@ -29,14 +29,14 @@ spring:
     admin:
       # setting client & register security to admin
       client:
-        username: ${spring.security.user.name}
-        password: ${spring.security.user.password}
+        username: admin
+        password: admin
         url: http://localhost:8094
         instance:
           metadata:
             user:
-              name: ${spring.security.user.name}
-              password: ${spring.security.user.password}
+              name: admin
+              password: admin
     # rabbitmq
   rabbitmq:
     host: localhost
