@@ -74,11 +74,20 @@ management:
 
 security:
   oauth2:
-    resource:
-      token-info-uri: http://localhost:9191/oauth/check_token
     client:
-      client-id: mobile
-      client-secret: pin
+      client-id: tiger
+      client-secret: tiger-app
+    resource:
+      filter-order: 3
+      jwt: -----BEGIN PUBLIC KEY-----
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzEBuTO5N6RhomHDLZSGj
+        e6pqMWbyuz7zHcgjkRayZ+F9QPoSV77BWMtl1MgCWbCZEW1kq/hIw28lBCbld9NR
+        TViUPd0Q9mUqYuJXn0ktt1iso9eDYRjwFx6RGJo6i0RqHAGVr09vDjbiUP01/sG/
+        lcnGlNshjbCY6ULWkLXInfCVAtgrj8tts2noIddskwnKW3htRv98xZYbtqC4oirQ
+        rmQdSOoIysDsEmfV856DayNAuSEpVbnPOHGS5v6KuxrhpYnfovstWN/ddgSjvgKy
+        J5jFQZ6wXEF/UdrQJpFvNOKtAyarKVMtOi7tujtcVOKVGfrOpo3I+KwjiZjBBH0B
+        GQIDAQAB
+        -----END PUBLIC KEY-----
 
 #eureka:
 #  client:
