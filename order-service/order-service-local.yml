@@ -77,6 +77,8 @@ security:
     client:
       client-id: tiger
       client-secret: tiger-app
+      accessTokenUri: http://localhost:9191/oauth/token
+      grantType: client_credentials
     resource:
       filter-order: 3
       jwt:
@@ -89,6 +91,29 @@ security:
           J5jFQZ6wXEF/UdrQJpFvNOKtAyarKVMtOi7tujtcVOKVGfrOpo3I+KwjiZjBBH0B
           GQIDAQAB
           -----END PUBLIC KEY-----
+
+  # TLS , port 587
+  #spring.mail.properties.mail.smtp.starttls.enable=true
+
+# SSL, post 465
+#spring.mail.properties.mail.smtp.socketFactory.port = 465
+#spring.mail.properties.mail.smtp.socketFactory.class = javax.net.ssl.SSLSocketFactory
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: duyhoangptit@gmail.com
+    password: 0983218961
+    properties: 
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+          socketFactory: 
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
 
 #eureka:
 #  client:
