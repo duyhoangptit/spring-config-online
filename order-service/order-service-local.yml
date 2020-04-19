@@ -61,20 +61,21 @@ spring:
         max-idle: 25
         max-wait: 30000ms
         min-idle: 5
-    mail:
-      default-encoding: UTF-8
-      host: smtp.gmail.com
-      username: duyhoangptit@gmail.com
-      password: 0976653494
-      port: 587
-      properties:
-        mail:
-          smtp:
-            auth: true
-            starttls:
-              enable: true
-      protocol: smtp
-      test-connection: false
+  # email
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: duyhoangptit@gmail.com
+    password: 0976653494
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
 
 management:
   security:
