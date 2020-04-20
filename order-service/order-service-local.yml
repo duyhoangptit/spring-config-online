@@ -62,7 +62,7 @@ spring:
         max-wait: 30000ms
         min-idle: 5
   # email
-  mail:
+  email:
     host: smtp.gmail.com
     username: hoangtd5english@gmail.com
     password: 01664063747
