@@ -107,14 +107,12 @@ security:
           GQIDAQAB
           -----END PUBLIC KEY-----
 
-
-#eureka:
-#  client:
-#    registryFetchIntervalSeconds: 5
-#    registerWithEureka: true
-#    fetchRegistry: true
-#    serviceUrl:
-#      defaultZone: http://localhost:8070/eureka
-#  instance:
-#    hostname: localhost
-
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka-server
+  instance:
+    hostname: localhost

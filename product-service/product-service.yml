@@ -63,5 +63,15 @@ storage:
   expire: 600
   bucketNamePrefix: tiger-
 
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka-server
+  instance:
+    hostname: localhost
+
 server:
   port: 8092
